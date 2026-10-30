@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --noir: #0b0908;
+  --charcoal: #14110f;
+  --gold: #c9a050;
+  --gold-light: #e2c280;
+  --ivory: #f9f6f0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--noir);
+  color: var(--ivory);
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+}
+
+.font-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Efek Navigasi Kaca Gelap */
+.glass-navbar {
+  background: rgba(11, 9, 8, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(201, 160, 80, 0.18);
+}
+
+/* Kartu Menu Mewah */
+.luxury-card {
+  background: rgba(24, 20, 17, 0.85);
+  border: 1px solid rgba(201, 160, 80, 0.18);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(201, 160, 80, 0.55);
+  box-shadow: 0 16px 32px -12px rgba(0, 0, 0, 0.7);
+}
+
+/* Animasi Zoom Gambar Halus */
+.img-zoom-container {
+  overflow: hidden;
+}
+.img-zoom-container img {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.luxury-card:hover .img-zoom-container img {
+  transform: scale(1.07);
+}
+
+/* Animasi Fade Up */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Pengaturan Cetak Struk Kasir Thermal 58mm */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #thermal-receipt, #thermal-receipt * {
+    visibility: visible;
+  }
+  #thermal-receipt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 58mm;
+    margin: 0;
+    padding: 2mm 3mm;
+    display: block !important;
+    background: #fff !important;
+    color: #000 !important;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11px;
+    line-height: 1.25;
+  }
+}

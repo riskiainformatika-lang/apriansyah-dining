@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>APRIANSYAH — Culinary Tale & Specialty Roastery by Riski Apriansyah</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            noir: { 950: '#070605', 900: '#0b0908', 800: '#14110f', 700: '#1f1a17' },
+            brass: { DEFAULT: '#c9a050', light: '#e3c485', dark: '#9c7832' },
+            ivory: '#f9f6f0'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-noir-900 text-ivory pb-32">
+
+  <!-- ================= NAVBAR MEWAH ================= -->
+  <header class="glass-navbar fixed top-0 left-0 right-0 z-40 px-4 sm:px-8 py-4">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <!-- Brand Identity -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-full border border-brass/50 flex items-center justify-center text-brass font-editorial font-bold text-xl tracking-tighter group-hover:bg-brass group-hover:text-noir-950 transition">
+          RA
+        </div>
+        <div>
+          <span class="font-editorial text-xl sm:text-2xl font-bold tracking-[0.2em] text-white block leading-none" id="nav-brand-name">APRIANSYAH</span>
+          <span class="text-[9px] uppercase tracking-[0.28em] text-brass block mt-1">By Riski Apriansyah</span>
+        </div>
+      </a>
+
+      <!-- Navigasi Tengah (Desktop) -->
+      <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-[0.2em] text-stone-300 font-medium">
+        <a href="#story" class="hover:text-brass transition">The Story</a>
+        <a href="#menu-section" class="hover:text-brass transition">The Menu</a>
+        <a href="#reservation-section" class="hover:text-brass transition">Reservations</a>
+        <a href="#gallery-section" class="hover:text-brass transition">Ambience</a>
+      </nav>
+
+      <!-- Status & Tombol Cepat -->
+      <div class="flex items-center gap-3">
+        <span id="badge-status-toko" class="bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 text-[9px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider">OPEN</span>
+        <a href="#reservation-section" class="hidden sm:inline-flex bg-brass hover:bg-brass-light text-noir-950 font-bold text-xs uppercase tracking-widest px-4 py-2.5 rounded-full transition">
+          Book a Table
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- BANNER RESTORAN TUTUP SEMENTARA -->
+<div id="closed-banner" class="hidden relative z-40 bg-rose-950/90 border-y border-rose-500/40 text-rose-200 py-3 px-4 backdrop-blur-md transition-all">
+  <div class="max-w-7xl mx-auto flex items-center justify-center gap-2.5 text-center text-xs md:text-sm font-medium">
+    <span class="flex h-2 w-2 relative">
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+      <span class="relative inline-flex rounded-full h-2 w-2 bg-rose-500"></span>
+    </span>
+    <p>
+      <strong class="font-bold text-white tracking-wide uppercase text-[11px] bg-rose-900/80 px-2 py-0.5 rounded border border-rose-500/30 mr-1">Tutup Sementara</strong>
+      Mohon maaf, sesi pemesanan online & dapur sedang istirahat sementara. Silakan cek kembali nanti atau hubungi WhatsApp kami.
+    </p>
+  </div>
+</div>
+
+  <!-- ================= HERO SECTION EDITORIAL ================= -->
+  <section class="relative min-h-[88vh] flex items-center justify-center px-4 pt-24 pb-16 overflow-hidden border-b border-brass/20">
+    <!-- Background Image dengan Dark Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600&auto=format&fit=crop&q=80" 
+           alt="Apriansyah Interior" class="w-full h-full object-cover opacity-30 scale-105">
+      <div class="absolute inset-0 bg-gradient-to-t from-noir-900 via-noir-900/75 to-noir-950/90"></div>
+    </div>
+
+    <div class="max-w-3xl mx-auto text-center relative z-10 space-y-6 animate-fade-up">
+      <div class="inline-flex items-center gap-2 border border-brass/40 bg-noir-950/60 px-4 py-1.5 rounded-full">
+        <span class="w-1.5 h-1.5 rounded-full bg-brass"></span>
+        <span class="text-[10px] uppercase tracking-[0.3em] text-brass font-semibold">Fine Dining • Roastery • Bakehouse</span>
+      </div>
+
+      <h1 class="font-editorial text-4xl sm:text-6xl md:text-7xl font-normal text-white leading-[1.1] tracking-wide">
+        A Culinary Tale Crafted by <span class="italic text-brass font-semibold">Riski Apriansyah</span>
+      </h1>
+
+      <p class="text-xs sm:text-base text-stone-300 max-w-xl mx-auto font-light leading-relaxed">
+        Perpaduan rempah autentik Nusantara, teknik panggang arang modern, dan seduhan kopi single-origin terbaik dalam suasana ruang yang intim dan berkelas.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-3">
+        <a href="#menu-section" class="w-full sm:w-auto bg-brass hover:bg-brass-light text-noir-950 font-extrabold text-xs uppercase tracking-[0.2em] px-8 py-4 rounded-full shadow-xl transition">
+          Explore Menu & Order
+        </a>
+        <a href="#reservation-section" class="w-full sm:w-auto bg-noir-800/90 hover:bg-noir-700 text-ivory border border-brass/40 font-bold text-xs uppercase tracking-[0.2em] px-8 py-4 rounded-full transition">
+          Reserve a Table
+        </a>
+      </div>
+
+      <div class="pt-6 flex flex-wrap justify-center gap-6 text-[11px] text-stone-400 uppercase tracking-widest">
+        <span>Grand Heritage Boulevard No. 88</span>
+        <span>•</span>
+        <span id="txt-store-hours">Open Daily: 08:00 — 23:00 WIB</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= THE STORY OF RISKI APRIANSYAH ================= -->
+  <section id="story" class="py-16 sm:py-24 px-4 border-b border-brass/15 bg-noir-950">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+      <div class="md:col-span-5 relative">
+        <div class="aspect-[4/5] rounded-3xl overflow-hidden border border-brass/30 shadow-2xl">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80" 
+               alt="Chef Riski Apriansyah Kitchen" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute -bottom-5 -right-4 bg-noir-800 border border-brass/40 p-4 rounded-2xl shadow-xl hidden sm:block">
+          <p class="font-editorial italic text-brass text-lg">"Every plate tells a memory."</p>
+          <p class="text-[10px] uppercase tracking-widest text-stone-400 mt-0.5">— Riski Apriansyah, Founder</p>
+        </div>
+      </div>
+
+      <div class="md:col-span-7 space-y-5">
+        <span class="text-[10px] uppercase tracking-[0.3em] text-brass font-bold">The Philosophy</span>
+        <h2 class="font-editorial text-3xl sm:text-5xl text-white font-normal leading-tight">
+          Where Heritage Meets <span class="italic text-brass">Modern Craftsmanship.</span>
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-300 leading-relaxed font-light">
+          Didirikan oleh <strong>Riski Apriansyah</strong>, rumah makan dan specialty roastery ini lahir dari satu obsesi sederhana: menyajikan hidangan yang tidak hanya mengenyangkan, tetapi meninggalkan cerita mendalam di setiap suapan.
+        </p>
+        <p class="text-xs sm:text-sm text-stone-400 leading-relaxed font-light">
+          Mulai dari biji kopi Arabika pilihan pegunungan Nusantara yang disangrai secara presisi setiap pekan, hingga potongan daging kualitas terbaik yang dipanggang di atas bara arang kayu manis—setiap detail dikurasi secara langsung di bawah standar dapur Riski Apriansyah.
+        </p>
+        <div class="pt-2 border-t border-brass/20 flex items-center justify-between">
+          <div>
+            <p class="font-editorial text-2xl italic text-brass">Riski Apriansyah</p>
+            <p class="text-[10px] uppercase tracking-widest text-stone-400">Executive Founder & Head Roaster</p>
+          </div>
+          <div class="text-right">
+            <span class="text-xl font-editorial font-bold text-white">100%</span>
+            <span class="text-[10px] uppercase tracking-widest text-brass block">Artisan & Halal Certified</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MENU & ONLINE ORDERING SECTION ================= -->
+  <section id="menu-section" class="max-w-6xl mx-auto px-4 py-16">
+    <!-- Judul Seksi Menu -->
+    <div class="text-center max-w-xl mx-auto mb-8 space-y-2">
+      <span class="text-[10px] uppercase tracking-[0.3em] text-brass font-bold">Curated Tasting Menu</span>
+      <h2 class="font-editorial text-3xl sm:text-5xl text-white">The Apriansyah Menu</h2>
+      <p class="text-xs text-stone-400">Pilih tipe layanan di bawah ini untuk memesan langsung ke meja Anda atau diantar ke rumah.</p>
+    </div>
+
+    <!-- Pemilih Layanan (Meja Dine-In / Takeaway / Delivery) -->
+    <div class="bg-noir-800 p-3.5 rounded-3xl border border-brass/30 shadow-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-2xl bg-brass/15 flex items-center justify-center text-brass">
+          <i data-lucide="utensils" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <p class="text-[10px] font-bold text-stone-400 uppercase tracking-widest">Mode Pemesanan Aktif</p>
+          <p class="text-xs font-extrabold text-white" id="current-service-indicator">Makan di Tempat (Dine-In Meja)</p>
+        </div>
+      </div>
+      <div class="flex gap-1.5">
+        <button onclick="setServiceType('dine_in')" id="btn-type-dinein" class="flex-1 sm:flex-none px-4 py-2 rounded-2xl text-xs font-bold bg-brass text-noir-950 shadow transition">Dine-In Meja</button>
+        <button onclick="setServiceType('takeaway')" id="btn-type-takeaway" class="flex-1 sm:flex-none px-4 py-2 rounded-2xl text-xs font-bold bg-noir-900 text-stone-300 border border-brass/20 hover:border-brass transition">Takeaway</button>
+        <button onclick="setServiceType('delivery')" id="btn-type-delivery" class="flex-1 sm:flex-none px-4 py-2 rounded-2xl text-xs font-bold bg-noir-900 text-stone-300 border border-brass/20 hover:border-brass transition">Delivery</button>
+      </div>
+    </div>
+
+    <!-- Search & Filter Bar -->
+    <div class="sticky top-16 z-30 bg-noir-900/95 backdrop-blur-md py-3 space-y-3 border-b border-brass/20 mb-6">
+      <div class="relative">
+        <i data-lucide="search" class="w-4 h-4 text-brass absolute left-4 top-3.5"></i>
+        <input type="text" id="search-box" placeholder="Cari hidangan" 
+               class="w-full pl-11 pr-10 py-2.5 bg-noir-800 border border-brass/30 rounded-2xl text-xs sm:text-sm text-white placeholder-stone-500 focus:ring-2 focus:ring-brass focus:outline-none">
+        <button onclick="resetSearch()" id="btn-clear-search" class="hidden absolute right-3.5 top-2.5 text-stone-400 hover:text-white font-bold p-1 text-sm">✕</button>
+      </div>
+      <div id="filter-categories" class="flex gap-2 overflow-x-auto hide-scrollbar pb-1"></div>
+    </div>
+
+    <!-- Quick Filter Badges -->
+    <div class="flex justify-between items-center mb-4">
+      <span class="text-xs font-editorial italic text-brass tracking-wider text-base" id="lbl-catalog-count">Showing All Creations</span>
+      <div class="flex gap-1.5 text-[11px]">
+        <button onclick="quickFilter('best_seller')" class="bg-brass/20 hover:bg-brass/30 text-brass border border-brass/40 font-bold px-3 py-1 rounded-full transition">Chef's Signature</button>
+        <button onclick="quickFilter('kopi')" class="bg-noir-800 hover:bg-noir-700 text-stone-300 border border-stone-700 font-bold px-3 py-1 rounded-full transition">Roastery</button>
+        <button onclick="quickFilter('grill')" class="bg-noir-800 hover:bg-noir-700 text-stone-300 border border-stone-700 font-bold px-3 py-1 rounded-full transition">Grill & Main</button>
+      </div>
+    </div>
+
+    <!-- Grid Katalog 18 Menu -->
+    <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+  </section>
+
+  <!-- ================= TABLE RESERVATION SECTION (PERSIS QISSA) ================= -->
+  <section id="reservation-section" class="py-16 sm:py-24 px-4 bg-noir-950 border-t border-b border-brass/20">
+    <div class="max-w-4xl mx-auto bg-noir-800/90 border border-brass/30 rounded-3xl p-6 sm:p-10 shadow-2xl">
+      <div class="text-center max-w-lg mx-auto mb-8 space-y-2">
+        <span class="text-[10px] uppercase tracking-[0.3em] text-brass font-bold">VIP & Dining Booking</span>
+        <h2 class="font-editorial text-3xl sm:text-4xl text-white">Reserve Your Table at Apriansyah</h2>
+        <p class="text-xs text-stone-400">Amankan meja terbaik Anda untuk jamuan makan malam, rapat bisnis, atau perayaan spesial.</p>
+      </div>
+
+      <form onsubmit="submitTableReservation(event)" class="space-y-4 text-xs">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div>
+            <label class="text-stone-300 font-bold block mb-1.5 uppercase tracking-wider text-[10px]">Nama Lengkap Tamu *</label>
+            <input type="text" id="res-name" required placeholder="Contoh: Bpk. Hendra Wijaya" class="w-full p-3 bg-noir-900 border border-brass/30 rounded-xl text-white focus:outline-none focus:border-brass">
+          </div>
+          <div>
+            <label class="text-stone-300 font-bold block mb-1.5 uppercase tracking-wider text-[10px]">Nomor WhatsApp *</label>
+            <input type="tel" id="res-phone" required placeholder="0812xxxxxxxx" class="w-full p-3 bg-noir-900 border border-brass/30 rounded-xl text-white focus:outline-none focus:border-brass">
+          </div>
+          <div>
+            <label class="text-stone-300 font-bold block mb-1.5 uppercase tracking-wider text-[10px]">Alamat Email *</label>
+            <input type="email" id="res-email" required placeholder="nama@email.com" class="w-full p-3 bg-noir-900 border border-brass/30 rounded-xl text-white focus:outline-none focus:border-brass">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div>
+            <label class="text-stone-300 font-bold block mb-1.5 uppercase tracking-wider text-[10px]">Tanggal Reservasi *</label>
+            <input type="date" id="res-date" required class="w-full p-3 bg-noir-900 border border-brass/30 rounded-xl text-white focus:outline-none focus:border-brass">
+          </div>
+          <div>
+            <label class="text-stone-300 font-bold block mb-1.5 uppercase tracking-wider text-[10px]">Jam Kedatangan *</label>
+            <input type="time" id="res-time" required class="w-full p-3 bg-noir-900 border border-brass/30 rounded-xl text-white focus:outline-none focus:border-brass">
+          </div>
+          <div>
+            <label class="text-stone-300 font-bold block mb-1.5 uppercase tracking-wider text-[10px]">Jumlah Tamu (Pax) *</label>
+            <select id="res-guests" class="w-full p-3 bg-noir-900 border border-brass/30 rounded-xl text-white focus:outline-none focus:border-brass">
+              <option value="2 Orang (Couple)">2 Orang (Couple)</option>
+              <option value="4 Orang (Family)">4 Orang (Family)</option>
+              <option value="6-8 Orang (Group)">6 - 8 Orang (Group)</option>
+              <option value="10+ Orang (Private Event)">10+ Orang (VIP Event)</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-stone-300 font-bold block mb-1.5 uppercase tracking-wider text-[10px]">Area Ruangan *</label>
+            <select id="res-area" class="w-full p-3 bg-noir-900 border border-brass/30 rounded-xl text-white focus:outline-none focus:border-brass">
+              <option value="Main Dining Hall">Main Dining Hall</option>
+              <option value="The Glass Conservatory">The Glass Conservatory</option>
+              <option value="Outdoor Garden Terrace">Outdoor Garden Terrace</option>
+              <option value="Apriansyah Private VIP Room">Apriansyah Private VIP</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="text-stone-300 font-bold block mb-1.5 uppercase tracking-wider text-[10px]">Permintaan Khusus (Ulang Tahun / Dekorasi / Alergi)</label>
+          <input type="text" id="res-notes" placeholder="Contoh: Meja dekat jendela, siapkan kue anniversary..." class="w-full p-3 bg-noir-900 border border-brass/30 rounded-xl text-white focus:outline-none focus:border-brass">
+        </div>
+
+        <div class="pt-2 text-center">
+          <button type="submit" class="w-full sm:w-auto bg-brass hover:bg-brass-light text-noir-950 font-black uppercase tracking-[0.2em] px-10 py-4 rounded-full shadow-xl transition">
+            Confirm Table Reservation
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ================= AMBIENCE GALLERY ================= -->
+  <section id="gallery-section" class="max-w-6xl mx-auto px-4 py-16">
+    <div class="text-center mb-8 space-y-1">
+      <span class="text-[10px] uppercase tracking-[0.3em] text-brass font-bold">Visual Journey</span>
+      <h2 class="font-editorial text-3xl sm:text-4xl text-white">The Apriansyah Ambience</h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+      <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&auto=format&fit=crop&q=80" class="rounded-2xl h-48 sm:h-64 w-full object-cover border border-brass/20 hover:opacity-90 transition" alt="Gallery 1">
+      <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&auto=format&fit=crop&q=80" class="rounded-2xl h-48 sm:h-64 w-full object-cover border border-brass/20 hover:opacity-90 transition" alt="Gallery 2">
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&auto=format&fit=crop&q=80" class="rounded-2xl h-48 sm:h-64 w-full object-cover border border-brass/20 hover:opacity-90 transition" alt="Gallery 3">
+      <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&auto=format&fit=crop&q=80" class="rounded-2xl h-48 sm:h-64 w-full object-cover border border-brass/20 hover:opacity-90 transition" alt="Gallery 4">
+    </div>
+  </section>
+
+  <!-- ================= FLOATING CHECKOUT BAR ================= -->
+  <div id="floating-bar" class="fixed bottom-0 left-0 right-0 p-3 sm:p-4 z-40 hidden">
+    <div class="max-w-4xl mx-auto">
+      <button onclick="openCheckoutModal()" class="w-full bg-brass hover:bg-brass-light text-noir-950 p-4 rounded-3xl shadow-2xl flex items-center justify-between border border-white/20 transition active:scale-[0.99]">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-2xl bg-noir-950 text-brass flex items-center justify-center font-black text-xs shadow" id="ui-cart-qty">0</div>
+          <div class="text-left">
+            <span class="text-[9px] text-noir-800 uppercase tracking-widest block font-extrabold">Your Tasting Tray</span>
+            <span class="text-base sm:text-lg font-black text-noir-950 font-mono" id="ui-cart-total">Rp0</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 bg-noir-950 text-brass font-black text-xs uppercase tracking-widest px-5 py-3 rounded-2xl shadow">
+          <span>Review & Pay</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= MODAL KUSTOMISASI HIDANGAN ================= -->
+  <div id="modal-item-custom" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4">
+    <div class="bg-noir-800 text-ivory w-full max-w-sm rounded-t-3xl sm:rounded-3xl p-6 space-y-4 shadow-2xl border border-brass/40">
+      <div class="flex justify-between items-start border-b border-brass/20 pb-3">
+        <div>
+          <h3 class="font-editorial font-bold text-xl text-white" id="mod-cust-title">Custom Dish</h3>
+          <p class="text-xs text-brass font-black font-mono mt-0.5" id="mod-cust-price">Rp0</p>
+        </div>
+        <button onclick="closeCustomModal()" class="text-stone-400 hover:text-white text-xl font-bold">&times;</button>
+      </div>
+
+      <div class="space-y-3 text-xs">
+        <div id="group-opt-temp">
+          <label class="font-bold text-stone-300 block mb-1.5 uppercase tracking-wider text-[10px]">Serving Temperature:</label>
+          <div class="grid grid-cols-2 gap-2">
+            <label class="border border-brass/30 rounded-xl p-2.5 flex items-center justify-center gap-2 cursor-pointer [&:has(input:checked)]:bg-brass [&:has(input:checked)]:text-noir-950 font-bold">
+              <input type="radio" name="opt-temp" value="Chilled / Iced" checked class="hidden"> 🧊 Iced (Dingin)
+            </label>
+            <label class="border border-brass/30 rounded-xl p-2.5 flex items-center justify-center gap-2 cursor-pointer [&:has(input:checked)]:bg-brass [&:has(input:checked)]:text-noir-950 font-bold">
+              <input type="radio" name="opt-temp" value="Warm / Hot" class="hidden"> ☕ Hot (Panas)
+            </label>
+          </div>
+        </div>
+
+        <div id="group-opt-sugar">
+          <label class="font-bold text-stone-300 block mb-1.5 uppercase tracking-wider text-[10px]">Sweetness / Spice Preference:</label>
+          <div class="grid grid-cols-3 gap-1.5">
+            <label class="border border-brass/30 rounded-xl p-2 text-center cursor-pointer [&:has(input:checked)]:bg-brass [&:has(input:checked)]:text-noir-950 font-bold">
+              <input type="radio" name="opt-sugar" value="Signature Standard" checked class="hidden"> Standard
+            </label>
+            <label class="border border-brass/30 rounded-xl p-2 text-center cursor-pointer [&:has(input:checked)]:bg-brass [&:has(input:checked)]:text-noir-950 font-bold">
+              <input type="radio" name="opt-sugar" value="Less Sweet / Mild" class="hidden"> Less (50%)
+            </label>
+            <label class="border border-brass/30 rounded-xl p-2 text-center cursor-pointer [&:has(input:checked)]:bg-brass [&:has(input:checked)]:text-noir-950 font-bold">
+              <input type="radio" name="opt-sugar" value="Pure / Zero Sugar" class="hidden"> Pure (0%)
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <label class="font-bold text-stone-300 block mb-1 uppercase tracking-wider text-[10px]">Chef / Barista Note:</label>
+          <input type="text" id="opt-notes" placeholder="Contoh: Tingkat kematangan medium well, saus pisah..." class="w-full p-2.5 bg-noir-900 border border-brass/30 rounded-xl text-xs text-white">
+        </div>
+      </div>
+
+      <button onclick="commitCustomAddToCart()" class="w-full bg-brass hover:bg-brass-light text-noir-950 font-black py-3.5 rounded-2xl text-xs uppercase tracking-widest shadow-lg">
+        + Add to Selection
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= MODAL CHECKOUT & DATA PEMESAN ================= -->
+  <div id="modal-checkout" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4">
+    <div class="bg-noir-800 text-ivory w-full max-w-lg rounded-t-3xl sm:rounded-3xl max-h-[92vh] flex flex-col overflow-hidden shadow-2xl border border-brass/40">
+      <div class="px-6 py-4 border-b border-brass/20 flex justify-between items-center bg-noir-950">
+        <div>
+          <h2 class="font-editorial font-bold text-xl text-white">Review Your Order</h2>
+          <p class="text-[11px] text-brass" id="checkout-service-subtitle">Layanan: Makan di Tempat</p>
+        </div>
+        <button onclick="closeCheckoutModal()" class="text-stone-400 hover:text-white text-2xl font-bold">&times;</button>
+      </div>
+
+      <div class="p-6 overflow-y-auto space-y-4 flex-1 text-xs">
+        <div>
+          <h3 class="font-bold text-brass uppercase tracking-widest text-[10px] mb-2">Selected Dishes:</h3>
+          <div id="checkout-items-list" class="space-y-2.5 divide-y divide-stone-800"></div>
+        </div>
+
+        <!-- Lokasi Meja atau Alamat -->
+        <div class="p-3.5 bg-noir-900 rounded-2xl border border-brass/30 space-y-2">
+          <div id="box-input-table">
+            <label class="font-bold text-brass block mb-1">Nomor Meja Anda *</label>
+            <input type="number" id="inp-table-no" placeholder="Contoh: 08" class="w-full p-2.5 bg-noir-800 border border-brass/40 rounded-xl text-sm font-black text-white">
+          </div>
+          <div id="box-input-delivery" class="hidden space-y-2">
+            <div>
+              <label class="font-bold text-brass block mb-1">Zona Pengantaran Kurir</label>
+              <select id="sel-delivery-zone" onchange="recalculateTotals()" class="w-full p-2.5 bg-noir-800 border border-brass/40 rounded-xl text-xs text-white"></select>
+            </div>
+            <div>
+              <label class="font-bold text-brass block mb-1">Alamat Lengkap Pengiriman *</label>
+              <textarea id="inp-deliv-address" rows="2" placeholder="Nama jalan, nomor rumah, patokan..." class="w-full p-2.5 bg-noir-800 border border-brass/40 rounded-xl text-xs text-white"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kontak Pemesan (Tanpa Login, Cukup Nama, WA, Email) -->
+        <div class="space-y-2.5">
+          <h3 class="font-bold text-brass uppercase tracking-widest text-[10px]">Guest Contact Details:</h3>
+          <div>
+            <label class="font-semibold text-stone-300 block mb-1">Nama Lengkap *</label>
+            <input type="text" id="inp-cust-name" placeholder="Nama Anda" class="w-full p-2.5 bg-noir-900 border border-stone-700 rounded-xl text-white">
+          </div>
+          <div class="grid grid-cols-2 gap-2.5">
+            <div>
+              <label class="font-semibold text-stone-300 block mb-1">Nomor WhatsApp *</label>
+              <input type="tel" id="inp-cust-phone" placeholder="0812xxxxxxxx" class="w-full p-2.5 bg-noir-900 border border-stone-700 rounded-xl text-white">
+            </div>
+            <div>
+              <label class="font-semibold text-stone-300 block mb-1">Alamat Email *</label>
+              <input type="email" id="inp-cust-email" placeholder="@gmail.com" class="w-full p-2.5 bg-noir-900 border border-stone-700 rounded-xl text-white">
+            </div>
+          </div>
+        </div>
+
+        <!-- Metode Pembayaran Non-Tunai Wajib -->
+        <div>
+          <label class="font-bold text-brass block mb-1.5 uppercase tracking-wider text-[10px]">Cashless Payment Method:</label>
+          <div class="grid grid-cols-2 gap-2.5">
+            <label class="border border-stone-700 rounded-2xl p-3 flex items-center gap-2 cursor-pointer [&:has(input:checked)]:border-brass [&:has(input:checked)]:bg-brass/15">
+              <input type="radio" name="pay-method" value="qris" checked class="hidden">
+              <span class="text-lg">📲</span>
+              <div>
+                <p class="font-black text-xs text-white">QRIS Instant</p>
+                <p class="text-[10px] text-stone-400">BCA, GoPay, OVO, Dana</p>
+              </div>
+            </label>
+            <label class="border border-stone-700 rounded-2xl p-3 flex items-center gap-2 cursor-pointer [&:has(input:checked)]:border-brass [&:has(input:checked)]:bg-brass/15">
+              <input type="radio" name="pay-method" value="transfer" class="hidden">
+              <span class="text-lg">🏦</span>
+              <div>
+                <p class="font-black text-xs text-white">Bank Transfer</p>
+                <p class="text-[10px] text-stone-400">BCA/BRI dan Mandiri</p>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Kode Voucher -->
+        <div class="flex gap-2">
+          <input type="text" id="inp-promo-code" placeholder="Kode Promo: RISKI15" class="flex-1 p-2.5 bg-noir-900 border border-stone-700 rounded-xl uppercase text-xs text-white">
+          <button onclick="applyPromoCode()" class="bg-brass text-noir-950 font-black px-4 rounded-xl text-xs">Apply</button>
+        </div>
+        <p id="msg-promo-feedback" class="text-[10px] font-bold hidden"></p>
+
+        <!-- Ringkasan Harga -->
+        <div class="bg-noir-950 p-4 rounded-2xl border border-brass/20 space-y-1.5">
+          <div class="flex justify-between text-stone-400"><span>Subtotal:</span><span id="txt-subtotal" class="font-bold text-white font-mono">Rp0</span></div>
+          <div class="flex justify-between text-emerald-400 hidden" id="row-discount"><span>Privilege Discount:</span><span id="txt-discount" class="font-mono">-Rp0</span></div>
+          <div class="flex justify-between text-stone-400"><span>Delivery / Service:</span><span id="txt-service-fee" class="font-bold text-white font-mono">Rp0</span></div>
+          <div class="flex justify-between text-sm font-black text-white pt-2 border-t border-stone-800">
+            <span>TOTAL BILL:</span>
+            <span id="txt-grand-total" class="text-brass text-base font-mono">Rp0</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 bg-noir-950 border-t border-brass/20">
+        <button onclick="launchPaymentGatewayModal()" class="w-full bg-brass hover:bg-brass-light text-noir-950 font-black py-3.5 rounded-2xl shadow-xl uppercase tracking-widest text-xs flex items-center justify-center gap-2">
+          <span>Proceed to Payment Gateway</span>
+          <i data-lucide="lock" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL PAYMENT GATEWAY ================= -->
+  <div id="modal-pay-gate" class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 hidden flex items-center justify-center p-3">
+    <div class="bg-noir-800 text-ivory w-full max-w-sm rounded-3xl p-6 text-center space-y-4 shadow-2xl border border-brass/40">
+      <div class="flex justify-between items-center border-b border-stone-800 pb-2">
+        <span class="text-[10px] font-bold text-brass uppercase tracking-widest">Apriansyah Payment Gate</span>
+        <button onclick="closePayGateModal()" class="text-stone-400 hover:text-white text-xl font-bold">&times;</button>
+      </div>
+
+      <div>
+        <p class="text-[11px] text-stone-400">Total Pembayaran:</p>
+        <p class="text-2xl font-black text-brass tracking-tight font-mono" id="pay-nominal-display">Rp0</p>
+      </div>
+
+      <div id="box-pay-qris" class="space-y-2">
+        <div class="p-3 bg-white rounded-2xl inline-block shadow-inner">
+          <img id="img-qris-target" src="" alt="QRIS Apriansyah" class="w-48 h-48 object-contain mx-auto">
+        </div>
+        <p class="text-[10px] text-stone-400">Scan QRIS di atas melalui aplikasi M-Banking atau E-Wallet Anda.</p>
+      </div>
+
+      <div id="box-pay-transfer" class="hidden bg-noir-950 p-3.5 rounded-2xl border border-brass/30 text-left space-y-1.5 text-xs">
+        <p class="font-bold text-brass" id="bank-title-display">Bank Central Asia (BCA)</p>
+        <div class="flex items-center justify-between bg-noir-800 p-2.5 border border-stone-700 rounded-xl">
+          <span class="font-mono font-bold text-sm text-white" id="bank-acc-display">8415-2910-29</span>
+          <button onclick="copyBankAcc()" class="bg-brass text-noir-950 text-[10px] font-black px-2.5 py-1 rounded-lg">Salin</button>
+        </div>
+        <p class="text-[10px] text-stone-400">Atas Nama: <strong class="text-white" id="bank-holder-display">Riski Apriansyah</strong></p>
+      </div>
+
+      <div class="pt-2 border-t border-stone-800 text-left space-y-1.5">
+        <label class="text-[11px] font-bold text-stone-300">Unggah Screenshot Bukti Pembayaran *</label>
+        <input type="file" id="inp-receipt-file" accept="image/*" class="w-full text-xs text-stone-400 file:mr-2 file:py-1.5 file:px-3 file:rounded-xl file:border-0 file:text-[11px] file:font-black file:bg-brass file:text-noir-950">
+      </div>
+
+      <button onclick="finalizeCustomerOrder()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black py-3.5 rounded-2xl text-xs uppercase tracking-widest shadow-lg transition">
+        Konfirmasi & Kirim ke Dapur
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= MODAL KONFIRMASI SUKSES ================= -->
+  <div id="modal-success" class="fixed inset-0 bg-black/90 backdrop-blur-md z-50 hidden flex items-center justify-center p-3">
+    <div class="bg-noir-800 text-ivory w-full max-w-sm rounded-3xl p-6 text-center space-y-4 shadow-2xl border border-brass/40">
+      <div class="w-14 h-14 bg-brass/20 text-brass border border-brass rounded-full flex items-center justify-center mx-auto text-2xl font-black">✓</div>
+      <div>
+        <h3 class="font-editorial text-2xl font-bold text-white" id="succ-modal-heading">Thank You for Your Order</h3>
+        <p class="text-xs text-stone-400 mt-0.5">Reference ID: <strong class="text-brass font-mono text-sm" id="lbl-success-order-id">#RA-000</strong></p>
+      </div>
+
+      <div class="bg-noir-950 p-3.5 rounded-2xl border border-stone-800 text-left text-xs space-y-1.5">
+        <div class="flex justify-between">
+          <span class="text-stone-400">Detail:</span>
+          <span class="font-bold text-white" id="lbl-success-location">Meja 04</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-stone-400">Status:</span>
+          <span class="bg-brass/20 text-brass font-bold px-2 py-0.5 rounded text-[10px]" id="lbl-live-order-status">Diterima Sistem</span>
+        </div>
+      </div>
+
+      <p class="text-[11px] text-stone-400">Tim Riski Apriansyah sedang menyiapkan layanan terbaik untuk Anda.</p>
+      <button onclick="closeSuccessModal()" class="w-full bg-brass text-noir-950 font-black py-3 rounded-2xl text-xs uppercase tracking-widest">
+        Kembali ke Beranda
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= FOOTER & PORTAL RAHASIA ADMIN ================= -->
+  <footer class="bg-noir-950 border-t border-brass/20 py-12 px-4 mt-16 text-center text-xs text-stone-400 space-y-4">
+    <div class="w-12 h-12 rounded-full border border-brass/40 flex items-center justify-center text-brass font-editorial font-bold text-xl mx-auto">
+      RA
+    </div>
+    <div>
+      <p class="font-editorial text-2xl text-white tracking-widest">APRIANSYAH</p>
+      <p class="text-[10px] uppercase tracking-[0.25em] text-brass mt-1">Culinary & Roastery by Riski Apriansyah</p>
+    </div>
+    <p class="text-stone-500 max-w-md mx-auto">Jl. Grand Heritage Boulevard No. 88 • Reservasi & Katering: info@apriansyah.com</p>
+    <div class="pt-4 border-t border-stone-900 max-w-xs mx-auto flex justify-between items-center text-[11px]">
+      <span>© 2026 Riski Apriansyah.</span>
+      <!-- Tautan Tersembunyi Khusus Admin / Kasir -->
+      <a href="admin.html" class="inline-flex items-center gap-1 text-stone-500 hover:text-brass transition">
+        <i data-lucide="lock" class="w-3 h-3"></i>
+        <span>Staff & POS Portal</span>
+      </a>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
